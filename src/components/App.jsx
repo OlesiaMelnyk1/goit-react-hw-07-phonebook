@@ -38,6 +38,8 @@ export const App = () => {
         <ContactsTitle>Contacts</ContactsTitle>
         <Filter />
         {isLoading && !error && <p>Request is loading...</p>}
+        {/* {isLoading && <p>Loading tasks...</p>}
+        {error && <p>{error}</p>} */}
         <ContactList />
       </Box>
       <GlobalStyle />

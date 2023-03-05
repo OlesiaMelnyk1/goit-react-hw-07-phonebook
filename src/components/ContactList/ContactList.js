@@ -9,10 +9,10 @@ export const ContactList = () => {
   return (
     <>
       <List>
-        {contacts.map(contact => {
+        {contacts.map(({ id, name, number }) => {
           return (
-            <Item key={contact.id}>
-              <ContactItem id={contact.id} data={contact} />
+            <Item key={id}>
+              <ContactItem id={id} name={name} number={number} />
             </Item>
           );
         })}

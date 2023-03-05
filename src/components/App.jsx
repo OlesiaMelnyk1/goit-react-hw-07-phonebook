@@ -6,7 +6,7 @@ import { Filter } from 'components/Filter/Filter';
 import { GlobalStyle, PhonebookTitle, ContactsTitle } from './GlobalStyles';
 import { Box } from 'components/Box';
 import { selectError, selectIsLoading } from 'redux/selectors';
-import { getContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/operations';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ export const App = () => {
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(getContacts());
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (

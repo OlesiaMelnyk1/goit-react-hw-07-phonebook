@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import shortid from 'shortid';
 import Notiflix from 'notiflix';
-import { addContacts } from 'redux/operations';
+import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 import {
   Form,
@@ -41,7 +41,7 @@ export const ContactForm = () => {
       Notiflix.Notify.failure(`${name} is already in contacts`);
       return;
     }
-    dispatch(addContacts({ name, number }));
+    dispatch(addContact({ name, number }));
     reset();
   };
 
